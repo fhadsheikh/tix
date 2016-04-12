@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" ng-show="client">
         <div class="card">
             <div class="support-title">Expired Support</div>
             <hr>
@@ -46,6 +46,13 @@
                     <div class="subtitle">{{stat.title}}</div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="row comment" style="margin-top:10px;position:absolute;bottom:0px;width:100%;overflow:hidden" ng-show="comment">
+    <div class="col-md-12">
+        <div class="alert alert-dismissible alert-info" style="font-size:22pt">
+          <strong>{{Name}}</strong> {{Preview}} - <em>{{Subject}}</em>
         </div>
     </div>
 </div>

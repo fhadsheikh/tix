@@ -69,6 +69,13 @@ angular.module('tixApp')
         $scope.techs = data;
     });
     
+    tix.bind('comments', function(data){
+        $scope.comment = false;
+        $scope.comment = true;
+        $scope.Name = data.Name;
+        $scope.Preview = data.Preview;
+        $scope.Subject = data.Subject;
+    });
     
     $timeout(function(){        
         $http.get(LINKS.url+ '/tv/tickets')
@@ -92,6 +99,16 @@ angular.module('tixApp')
     
     $timeout(function(){
         $http.get(LINKS.url+ '/tv/techs')
+        .success(function(){
+
+        })
+        .error(function(){
+
+        });
+    }, 10000);
+    
+    $timeout(function(){
+        $http.get(LINKS.url+ '/tv/comments')
         .success(function(){
 
         })
@@ -129,6 +146,16 @@ angular.module('tixApp')
             
         });
     },600000);
+    
+    $interval(function(){
+        $http.get(LINKS.url+ '/tv/comments')
+        .success(function(){
+            
+        })
+        .error(function(){
+            
+        });
+    },15000);
 
     
   });

@@ -78,4 +78,12 @@ hr {
     background-color: transparent!important;
 }
 
+.comment {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+.comment.ng-hide {
+  opacity:0;
+}
+
 
