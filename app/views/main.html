@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card" ng-animate="'animate'" ng-repeat="tech in techs | orderBy: '-Closed'" ng-style="{ 'top': country.position * 20 + 'px' }">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">{{tech.name}} <span style="float:right">{{tech.Total}} open | <span style="color:#ff6e6e">{{tech.Closed}} closed</span></span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="progress progress-striped active">
+                      <div class="progress-bar progress-bar-success" style="width: {{tech.PercentStaff}}%"></div>
+                      <div class="progress-bar progress-bar-warning" style="width: {{tech.PercentClient}}%"></div>
+                      <div class="progress-bar progress-bar-info" style="width: {{tech.PercentTech}}%"></div>
+                      <div class="progress-bar progress-bar-danger" style="width: {{tech.PercentNew}}%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="support-title">Expired Support</div>
+            <hr>
+            <ul class="client-list">
+                <li ng-repeat="client in expiredclients"><i class="fa fa-thumbs-o-down"></i> {{client.name}} <span style="float:right;font-size:14pt;padding-top:7px">{{client.date}}</span></li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="support-title">Expiring Soon</div>
+            <hr>
+            <ul class="client-list">
+                <li ng-repeat="client in expiringclients"><i class="fa fa-hand-stop-o"></i> {{client.name}} <span style="float:right;font-size:14pt;padding-top:7px">{{client.date}}</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3" ng-repeat="stat in stats">
+        <div class="card">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="big-title">{{stat.number}}</div>
+                </div>
+                <div class="col-md-9" style="padding:0px">
+                    <div class="subtitle">{{stat.title}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

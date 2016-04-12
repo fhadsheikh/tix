@@ -1,0 +1,81 @@
+// bower:scss
+// endbower
+
+$background: #1B1B1B;
+$foreground: rgba(0,0,0,0.3);
+
+
+.browsehappy {
+    
+    
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+    color:white;
+    background-color:$background;
+    font-family: 'Roboto Slab', serif;
+}
+
+hr {
+    margin:10px;
+}
+
+/* Tech Stats */
+
+/* Cards */
+
+.card {
+    background-color:$foreground;
+    padding: 10px 10px 2px 10px;
+    border-radius: 7px;
+    margin: 10px 0px;
+}
+
+.card .title {
+    font-size:24pt;
+    padding-bottom: 10px;
+}
+
+.card .stats {
+    font-size:18pt;
+    padding-bottom: 10px;
+    text-align: right;
+    color:gold;
+}
+
+.card .big-title{
+    font-size:32pt;
+    text-align:right;
+    font-weight: bold;
+}
+
+.card .subtitle{
+    font-size:23pt;
+    padding-top:8px;
+    
+}
+
+.card .support-title{
+    font-size:24pt;
+    font-weight: bold;
+}
+
+.card .client-list{
+    list-style: none;
+    padding-left:15px;
+}
+
+.card .client-list li{
+    font-size:22pt;
+}
+
+/* Overwrites */
+.progress {
+    background-color: transparent!important;
+}
+
+
