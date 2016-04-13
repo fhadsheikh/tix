@@ -69,12 +69,13 @@ angular.module('tixApp')
         $scope.techs = data;
     });
     
-    tix.bind('comments', function(data){
+    tix.bind('comments2', function(data){
         $scope.comment = false;
         $scope.comment = true;
         $scope.Name = data.Name;
         $scope.Preview = data.Preview;
         $scope.Subject = data.Subject;
+        $scope.Date = data.Date;
     });
     
     $timeout(function(){        

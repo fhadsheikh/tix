@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'pusher-angular'
+    'pusher-angular',
+    'ngtimeago'
   ])
   .config(function ($routeProvider) {
     $routeProvider
