@@ -23,14 +23,14 @@
             <div class="support-title">Expired Support</div>
             <hr>
             <ul class="client-list">
-                <li ng-repeat="client in expiredclients"><i class="fa fa-thumbs-o-down"></i> {{client.name}} <span style="float:right;font-size:14pt;padding-top:7px">{{client.date}}</span></li>
+                <li ng-repeat="client in expiredclients"><i class="fa fa-thumbs-o-down"></i> {{client.name}} <span style="float:right;font-size:14pt;padding-top:7px">{{client.date | timeago}}</span></li>
             </ul>
         </div>
         <div class="card">
             <div class="support-title">Expiring Soon</div>
             <hr>
             <ul class="client-list">
-                <li ng-repeat="client in expiringclients"><i class="fa fa-hand-stop-o"></i> {{client.name}} <span style="float:right;font-size:14pt;padding-top:7px">{{client.date}}</span></li>
+                <li ng-repeat="client in expiringclients"><i class="fa fa-hand-stop-o"></i> {{client.name}} <span style="float:right;font-size:14pt;padding-top:7px">{{client.date | timeago}}</span></li>
             </ul>
         </div>
     </div>
@@ -52,7 +52,7 @@
 <div class="row comment" style="margin-top:10px;position:absolute;bottom:0px;width:100%;overflow:hidden" ng-show="comment">
     <div class="col-md-12">
         <div class="alert alert-dismissible alert-info" style="font-size:22pt">
-          <strong>{{Name}}</strong> {{Preview}} - <em>{{Subject}}</em>
+          {{Date}} - <strong>{{Name}}</strong> {{Preview}} - <em>{{Subject}}</em>
         </div>
     </div>
 </div>
