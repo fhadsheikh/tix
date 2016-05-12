@@ -9,5 +9,5 @@
  */
 angular.module('tixApp')
   .constant('LINKS', {
-    "url": "http://FHAD:8080/tsk"
+    "url": "http://apps/tsk"
 });
