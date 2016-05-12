@@ -15,6 +15,9 @@ angular.module('tixApp')
     
     var tix = pusher.subscribe('tix');
     
+
+    
+    
     tix.bind('support', function(data){
         
         $scope.expiredclients = data.expiredClients;
@@ -69,14 +72,24 @@ angular.module('tixApp')
         $scope.techs = data;
     });
     
-    tix.bind('comments2', function(data){
-        $scope.comment = false;
-        $scope.comment = true;
-        $scope.Name = data.Name;
-        $scope.Preview = data.Preview;
-        $scope.Subject = data.Subject;
-        $scope.Date = data.Date;
+    tix.bind('newsletter', function(data){
+        $scope.newsletterSubs = {};
+        $scope.newsletterSubs.count = data.count;
+        $scope.newsletterSubs.percent = data.count * 100 / 50;
     });
+    
+//    tix.bind('comments2', function(data){
+//        $scope.comment = false;
+//        $scope.comment = true;
+//        $scope.Name = data.Name;
+//        $scope.Preview = data.Preview;
+//        $scope.Subject = data.Subject;
+//        $scope.Date = data.Date;
+//    });
+    
+    $timeout(function(){
+        $http.get(LINKS.url+'/tv/newsletter');
+    },1000)
     
     $timeout(function(){        
         $http.get(LINKS.url+ '/tv/tickets')
@@ -146,17 +159,12 @@ angular.module('tixApp')
         .error(function(){
             
         });
-    },600000);
+    },60000);
     
     $interval(function(){
-        $http.get(LINKS.url+ '/tv/comments')
-        .success(function(){
-            
-        })
-        .error(function(){
-            
-        });
-    },15000);
+        $http.get(LINK.url+'/tv/newsletter');
+    },60000)
+    
 
     
   });

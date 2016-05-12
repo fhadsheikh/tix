@@ -48,6 +48,25 @@
             </div>
         </div>
     </div>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="big-title">{{newsletterSubs.count}}</div>
+                </div>
+                <div class="col-md-6" style="padding:0px">
+                    <div class="subtitle">Newsletter Subscribers</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="progress progress-striped active">
+                      <div class="progress-bar progress-bar-danger" style="width:{{newsletterSubs.percent}}%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="row comment" style="margin-top:10px;position:absolute;bottom:0px;width:100%;overflow:hidden" ng-show="comment">
     <div class="col-md-12">
