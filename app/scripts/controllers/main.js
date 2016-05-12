@@ -89,7 +89,7 @@ angular.module('tixApp')
     
     $timeout(function(){
         $http.get(LINKS.url+'/tv/newsletter');
-    },1000)
+    },1000);
     
     $timeout(function(){        
         $http.get(LINKS.url+ '/tv/tickets')
@@ -162,8 +162,8 @@ angular.module('tixApp')
     },60000);
     
     $interval(function(){
-        $http.get(LINK.url+'/tv/newsletter');
-    },60000)
+        $http.get(LINKS.url+'/tv/newsletter');
+    },60000);
     
 
     
